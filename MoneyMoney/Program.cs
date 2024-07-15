@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace MoneyMoney
 {
@@ -6,10 +6,10 @@ namespace MoneyMoney
     {
         static void Main(string[] args)
         {
-            const string CommandRubleToDollar = "1";
-            const string CommandDollarToRuble = "2";
-            const string CommandRubleToEuro = "3";
-            const string CommandEuroToRuble = "4";
+            const string CommandRubToDollar = "1";
+            const string CommandDollarToRub = "2";
+            const string CommandRubToEuro = "3";
+            const string CommandEuroToRub = "4";
             const string CommandDollarToEuro = "5";
             const string CommandEuroToDollar = "6";
             const string CommandExit = "7";
@@ -46,10 +46,10 @@ namespace MoneyMoney
             while (isWork)
             {
                 Console.WriteLine("Выберите нужную вам операцию.");
-                Console.WriteLine($"{CommandRubleToDollar} - обменять рубли на доллары");
-                Console.WriteLine($"{CommandDollarToRuble} - обменять доллары на рубли");
-                Console.WriteLine($"{CommandRubleToEuro} - обменять рубли на евро");
-                Console.WriteLine($"{CommandEuroToRuble} - обменять евро на рубли");
+                Console.WriteLine($"{CommandRubToDollar} - обменять рубли на доллары");
+                Console.WriteLine($"{CommandDollarToRub} - обменять доллары на рубли");
+                Console.WriteLine($"{CommandRubToEuro} - обменять рубли на евро");
+                Console.WriteLine($"{CommandEuroToRub} - обменять евро на рубли");
                 Console.WriteLine($"{CommandDollarToEuro} - обменять доллары на евро");
                 Console.WriteLine($"{CommandEuroToDollar} - обменять евро на доллары");
                 Console.WriteLine($"{CommandExit} - выход из обменника");
@@ -58,7 +58,7 @@ namespace MoneyMoney
 
                 switch (desiredOperation)
                 {
-                    case CommandRubleToDollar:
+                    case CommandRubToDollar:
                         Console.WriteLine("Обмен рублей на доллары");
                         Console.Write("Сколько вы хотите обменять? ");
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -66,7 +66,7 @@ namespace MoneyMoney
                         if(rublesInWallet >= exchangeCurrencyCount)
                         {
                             rublesInWallet -= exchangeCurrencyCount;
-                            dollarsInWallet += exchangeCurrencyCount * rubleToDollar;
+                            dollarsInWallet += exchangeCurrencyCount * rubToDollar;
                         }
                         else
                         {
@@ -74,7 +74,7 @@ namespace MoneyMoney
                         }
                         break;
 
-                    case CommandDollarToRuble:
+                    case CommandDollarToRub:
                         Console.WriteLine("Обмен долларов на рубли");
                         Console.Write("Сколько вы хотите обменять? ");
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -82,7 +82,7 @@ namespace MoneyMoney
                         if (dollarsInWallet >= exchangeCurrencyCount)
                         {
                             dollarsInWallet -= exchangeCurrencyCount;
-                            rublesInWallet += exchangeCurrencyCount * dollarToRuble;
+                            rublesInWallet += exchangeCurrencyCount * dollarToRub;
                         }
                         else
                         {
@@ -90,7 +90,7 @@ namespace MoneyMoney
                         }
                         break;
 
-                    case CommandRubleToEuro:
+                    case CommandRubToEuro:
                         Console.WriteLine("Обмен рублей на Евро");
                         Console.Write("Сколько вы хотите обменять? ");
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -98,7 +98,7 @@ namespace MoneyMoney
                         if (rublesInWallet >= exchangeCurrencyCount)
                         {
                             rublesInWallet -= exchangeCurrencyCount;
-                            eurosInWallet += exchangeCurrencyCount * rubleToEuro;
+                            eurosInWallet += exchangeCurrencyCount * rubToEuro;
                         }
                         else
                         {
@@ -106,7 +106,7 @@ namespace MoneyMoney
                         }
                         break;
 
-                    case CommandEuroToRuble:
+                    case CommandEuroToRub:
                         Console.WriteLine("Обмен Евро на рубли");
                         Console.Write("Сколько вы хотите обменять? ");
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -114,7 +114,7 @@ namespace MoneyMoney
                         if (eurosInWallet >= exchangeCurrencyCount)
                         {
                             eurosInWallet -= exchangeCurrencyCount;
-                            rublesInWallet += exchangeCurrencyCount * euroToRuble;
+                            rublesInWallet += exchangeCurrencyCount * euroToRub;
                         }
                         else
                         {
