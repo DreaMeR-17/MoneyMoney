@@ -23,9 +23,12 @@ namespace MoneyMoney
 
             float exchangeCurrencyCount;
 
-            float rubleToDollar = 0.012f, dollarToRuble = 87;
-            float rubleToEuro = 0.01f, euroToRuble = 95;
-            float dollarToEuro = 0.91f, euroToDollar = 1.09f;
+            float rubToDollar = 0.012f;
+            float dollarToRub = 87;
+            float rubToEuro = 0.01f;
+            float euroToRub = 95;
+            float dollarToEuro = 0.91f;
+            float euroToDollar = 1.09f;
 
             bool isWork = true;
 
@@ -39,7 +42,6 @@ namespace MoneyMoney
 
             Console.Write("Введите баланс евро: ");
             eurosInWallet = Convert.ToSingle(Console.ReadLine());
-
 
             while (isWork)
             {
